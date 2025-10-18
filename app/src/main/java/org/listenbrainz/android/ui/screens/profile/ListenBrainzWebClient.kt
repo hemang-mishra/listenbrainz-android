@@ -155,6 +155,8 @@ class ListenBrainzWebClient(
             uri.path?.contains("agree-to-terms") == true -> {
                 view?.postDelayed(2000) {
                     checkForEmailVerificationError(view) {
+                        Logger.d(TAG, "Trying to naviagate to settings page from GDPR page")
+                        hasTriedSettingsNavigation = true
                         view.loadUrl("https://listenbrainz.org/settings")
                     }
                 }

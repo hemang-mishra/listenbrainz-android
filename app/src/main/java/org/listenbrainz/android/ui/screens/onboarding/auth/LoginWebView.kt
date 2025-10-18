@@ -118,9 +118,7 @@ fun ListenBrainzLogin(
         // Only create ListenBrainzClient when user is actively logging in
         if (isLoggingIn) {
             ListenBrainzClient(
-                modifier = Modifier
-                    .size(1.dp)
-                    .alpha(0f),
+                modifier = Modifier,
                 username = username,
                 password = password,
                 onLoad = { resource ->
